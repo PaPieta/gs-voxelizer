@@ -5,7 +5,6 @@ Fast implementation of the Gaussian Splatting Voxelizer. Implemented as a part o
 
 ### [Main Repository](https://github.com/PaPieta/fact-gs) | [Paper](TBA) | [Project Page](TBA)
 
-Based on [r2_gaussian](https://github.com/Ruyi-Zha/r2_gaussian/tree/main/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization). Inspired by [image-gs](https://github.com/NYU-ICL/image-gs), [taming-3dgs](https://github.com/humansensinglab/taming-3dgs), [StopThePop](https://github.com/r4dl/StopThePop) 
 
 #### Related repositiories (applied in the paper):
 [Fast CT Rasterizer](https://github.com/PaPieta/gs-ct-rasterizer) | [Fused SSIM](https://github.com/rahul-goel/fused-ssim) (2D and 3D) | [Fused 3D TV](https://github.com/PaPieta/fused-3D-tv)
