@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gs-voxelizer"
+version = "0.1.0"
+description = "Gaussian splatting voxelizer"
+requires-python = ">=3.8"
+authors = [{name = "Pawel Tomasz Pieta"}]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}

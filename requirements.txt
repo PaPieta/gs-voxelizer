@@ -1,0 +1,4 @@
+jaxtyping
+rich>=12
+torch
+typing_extensions
