@@ -41,6 +41,7 @@ vol_size_voxel = (100, 150, 80)  # (z, y, x)
 # Keep them in the below "default" setup if gaussians are initialized in 0-1 position range
 vol_size_world = (1.0, 1.0, 1.0) # (z, y, x)
 vol_center_pos = (0.5, 0.5, 0.5) # (z, y, x)
+
 num_gaussians = 5000
 # Init test volume (z, y, x)
 vol = utils.generate_test_volume(vol_size_voxel)
