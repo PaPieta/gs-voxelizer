@@ -3,7 +3,7 @@
 Fast implementation of the Gaussian Splatting Voxelizer. Implemented as a part of the paper:
 > FaCT-GS: Fast and Scalable CT Reconstruction with Gaussian Splatting
 
-### [Main Repository](https://github.com/PaPieta/fact-gs) | [Paper](TBA) | [Project Page](TBA)
+### [Main Repository](https://github.com/PaPieta/fact-gs) | [Paper](TBA) | [Project Page](https://papieta.github.io/fact-gs/)
 
 
 #### Related repositiories (applied in the paper):
