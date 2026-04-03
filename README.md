@@ -96,7 +96,7 @@ Baseline is sourced from [r2_gaussian](https://github.com/Ruyi-Zha/r2_gaussian/t
 
 If this repository helped in your research, please consider citing our work:
 ```
-@misc{pieta2026factgsfastscalablect,
+@misc{pieta2026,
       title={FaCT-GS: Fast and Scalable CT Reconstruction with Gaussian Splatting}, 
       author={Pawel Tomasz Pieta and Rasmus Juul Pedersen and Sina Borgi and Jakob Sauer Jørgensen and Jens Wenzel Andreasen and Vedrana Andersen Dahl},
       year={2026},
