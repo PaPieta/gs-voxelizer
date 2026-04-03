@@ -3,7 +3,7 @@
 Fast implementation of the Gaussian Splatting Voxelizer. Implemented as a part of the paper:
 > FaCT-GS: Fast and Scalable CT Reconstruction with Gaussian Splatting
 
-### [Main Repository](https://github.com/PaPieta/fact-gs) | [Paper](TBA) | [Project Page](https://papieta.github.io/fact-gs/)
+### [Main Repository](https://github.com/PaPieta/fact-gs) | [Paper](https://arxiv.org/pdf/2604.01844) | [Project Page](https://papieta.github.io/fact-gs/)
 
 
 #### Related repositiories (applied in the paper):
@@ -91,6 +91,21 @@ Voxelizer supports volumes with up to 4 channels. The paper and performance test
 Baseline is sourced from [r2_gaussian](https://github.com/Ruyi-Zha/r2_gaussian/tree/main/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization).
 
 <img src="./test/test_out_speed/speed_vs_gaussians.png" width="45%"> <img src="./test/test_out_speed/speed_vs_volume.png" width="45%"> 
+
+## Citation
+
+If this repository helped in your research, please consider citing our work:
+```
+@misc{pieta2026factgsfastscalablect,
+      title={FaCT-GS: Fast and Scalable CT Reconstruction with Gaussian Splatting}, 
+      author={Pawel Tomasz Pieta and Rasmus Juul Pedersen and Sina Borgi and Jakob Sauer Jørgensen and Jens Wenzel Andreasen and Vedrana Andersen Dahl},
+      year={2026},
+      eprint={2604.01844},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2604.01844}, 
+}
+```
 
 ## Acknowledgements
 
