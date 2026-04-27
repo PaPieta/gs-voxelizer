@@ -1,33 +1,33 @@
 # Fast Gaussian Splatting Voxelizer
 
-Fast implementation of the Gaussian Splatting Voxelizer. Implemented as a part of the paper:
+Fast implementation of the Gaussian Splatting Voxelizer. Implemented as part of the paper:
 > FaCT-GS: Fast and Scalable CT Reconstruction with Gaussian Splatting
 
 ### [Main Repository](https://github.com/PaPieta/fact-gs) | [Paper](https://arxiv.org/pdf/2604.01844) | [Project Page](https://papieta.github.io/fact-gs/)
 
 
-#### Related repositiories (applied in the paper):
+#### Related repositories (used in the paper):
 [Fast CT Rasterizer](https://github.com/PaPieta/gs-ct-rasterizer) | [Fused SSIM](https://github.com/rahul-goel/fused-ssim) (2D and 3D) | [Fused 3D TV](https://github.com/PaPieta/fused-3D-tv)
 
-## Prerequirements
+## Prerequisites
 
-1. You must have PyTorch installed with CUDA backend, and an NVIDIA GPU
-2. This repo requires [GLM](https://github.com/g-truc/glm). It will be downloaded automatically to ```gs_voxelizer/third_party/glm```. To provide the library from another location, set the "GLM_HOME" env variable to an appropriate path (```export GLM_HOME=my/path/to/glm/lib```).
+1. You must have PyTorch installed with a CUDA backend and an NVIDIA GPU.
+2. This repo requires [GLM](https://github.com/g-truc/glm). It will be downloaded automatically to `gs_voxelizer/third_party/glm`. To provide the library from another location, set the `GLM_HOME` environment variable to an appropriate path (`export GLM_HOME=my/path/to/glm/lib`).
 
-Check ```test/test_requirements.txt``` for additional python requirements needed to run the test scripts.
+Check `test/test_requirements.txt` for additional Python packages needed to run the test scripts.
 
 > If you plan to run the whole FaCT-GS reconstruction pipeline, it is recommended to follow the installation steps from the [Main Repository](https://github.com/PaPieta/fact-gs).
 
 ## Installation
 
-In the cloned repository:
+In the cloned repository, run:
 ```
 pip install . --no-build-isolation
 ```
 
 ## Minimal example
 
->Using test/utils.py
+> Using helpers from `test/utils.py`
 
 ```python
 from gs_voxelizer import voxelize, optim_to_render
@@ -36,9 +36,9 @@ import torch
 from torch.nn.functional import l1_loss
 
 vol_size_voxel = (100, 150, 80)  # (z, y, x)
-# Below are needed for compatibility with CT rasterizer in reconstruction tasks
+# The values below are needed for compatibility with the CT rasterizer in reconstruction tasks
 # If voxelizer is used separately, they can be largely ignored.
-# Keep them in the below "default" setup if gaussians are initialized in 0-1 position range
+# Keep them in the "default" setup below if gaussians are initialized in the 0-1 position range
 vol_size_world = (1.0, 1.0, 1.0) # (z, y, x)
 vol_center_pos = (0.5, 0.5, 0.5) # (z, y, x)
 
@@ -84,17 +84,17 @@ loss.backward()
 
 ### Note!
 
-Voxelizer supports volumes with up to 4 channels. The paper and performance tests only cover running it in the 1-channel version.
+The voxelizer supports volumes with up to 4 channels. The paper and performance tests only cover running it in single-channel mode.
 
 ## Performance Comparison
 
-Baseline is sourced from [r2_gaussian](https://github.com/Ruyi-Zha/r2_gaussian/tree/main/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization).
+The baseline is sourced from [r2_gaussian](https://github.com/Ruyi-Zha/r2_gaussian/tree/main/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization).
 
 <img src="./test/test_out_speed/speed_vs_gaussians.png" width="45%"> <img src="./test/test_out_speed/speed_vs_volume.png" width="45%"> 
 
 ## Citation
 
-If this repository helped in your research, please consider citing our work:
+If this repository helped your research, please consider citing our work:
 ```
 @misc{pieta2026,
       title={FaCT-GS: Fast and Scalable CT Reconstruction with Gaussian Splatting}, 
@@ -109,7 +109,7 @@ If this repository helped in your research, please consider citing our work:
 
 ## Acknowledgements
 
-Codebase adapted from [image-gs](https://github.com/NYU-ICL/image-gs). Implementations inspired by [r2_gaussian](https://github.com/Ruyi-Zha/r2_gaussian/tree/main/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization), [taming-3dgs](https://github.com/humansensinglab/taming-3dgs), [StopThePop](https://github.com/r4dl/StopThePop).
+The codebase is adapted from [image-gs](https://github.com/NYU-ICL/image-gs). Implementations are inspired by [r2_gaussian](https://github.com/Ruyi-Zha/r2_gaussian/tree/main/r2_gaussian/submodules/xray-gaussian-rasterization-voxelization), [taming-3dgs](https://github.com/humansensinglab/taming-3dgs), and [StopThePop](https://github.com/r4dl/StopThePop).
 
 ## LICENSE
 
